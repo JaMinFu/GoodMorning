@@ -1,7 +1,9 @@
 from datetime import date, datetime, timedelta
 import imp
 import math
+from pydoc import doc
 import re
+from unittest import result
 from wechatpy import WeChatClient, WeChatClientException
 from wechatpy.client.api import WeChatMessage
 import requests
@@ -79,16 +81,14 @@ def get_daily_eng():
   res = conn.getresponse()
   data = res.read()
   print(data.decode('utf-8'))
-  res=data.decode('utfg')
   result=data.decode('utf-8')
   fin=json.loads(result)
   doc=''
-  if fin['code'] ==200:
-    print(fin['newslist'][0]['content'] 
-  + fin['newslist'][0]['note'])
-  doc=fin['newslist'][0]['content'] 
-  + fin['newslist'][0]['note']
+  if fin['code']==200:
+    doc=fin['newslist'][0]['content']+fin['newslist'][0]['content']
+    print(doc)
   return doc
+
 
 
 #网易云英语热评
@@ -96,8 +96,6 @@ def get_hot():
   if tx_key is None:
     print('没有设置天行key')
     return 0
-
-
 
 
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功
