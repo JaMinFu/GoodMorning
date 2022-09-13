@@ -85,7 +85,7 @@ def get_daily_eng():
   fin=json.loads(result)
   doc=''
   if fin['code']==200:
-    doc=fin['newslist'][0]['content']+fin['newslist'][0]['content']
+    doc=fin['newslist'][0]['content'] + fin['newslist'][0]['note']
     print(doc)
   return doc
 
@@ -135,7 +135,7 @@ data = {
     "color": get_random_color()
   },
   "weather": {
-    "value": weather['weather'],
+    "value": weather['weather'] +weather['wind'] +'空气质量：'+weather['airQuality'],
     "color": get_random_color()
   },
   "temperature": {
