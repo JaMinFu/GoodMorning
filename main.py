@@ -135,7 +135,15 @@ data = {
     "color": get_random_color()
   },
   "weather": {
-    "value": weather['weather'] +weather['wind'] +'空气质量：'+weather['airQuality'],
+    "value": weather['weather'] +weather['wind'] +'空气质量,'+weather['airQuality'],
+    "color": get_random_color()
+  },
+    "wind": {
+    "value": weather['wind'],
+    "color": get_random_color()
+  },
+    "airQuality": {
+    "value": weather['airQuality'],
     "color": get_random_color()
   },
   "temperature": {
