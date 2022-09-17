@@ -104,7 +104,7 @@ def get_words():
   if words.status_code != 200:
     return get_words()
   print(words.json()['data']['text'])
-  return '心情大好 出去走走 碧海蓝天 吹吹风，河山大好 出去走走 别窝在家 当懒虫。'
+  return words.json()['data']['text']
 
 
 def format_temperature(temperature):
