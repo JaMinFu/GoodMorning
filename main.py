@@ -104,7 +104,7 @@ def get_words():
   if words.status_code != 200:
     return get_words()
   print(words.json()['data']['text'])
-  return '早上好呀，臭宝，今天是你的第23个生日，不知不觉从你出生到现在已经过了8388天了。虽然今天不能陪你度过这特殊的日子，但在这遥远的地方，我一样祝你生日快乐哟，么么哒( ˘ ³˘)♥'
+  return 'words.json()['data']['text']'
 
 
 def format_temperature(temperature):
