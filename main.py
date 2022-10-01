@@ -104,7 +104,7 @@ def get_words():
   if words.status_code != 200:
     return get_words()
   print(words.json()['data']['text'])
-  return 'words.json()['data']['text']'
+  return words.json()['data']['text']
 
 
 def format_temperature(temperature):
