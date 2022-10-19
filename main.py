@@ -89,15 +89,6 @@ def get_daily_eng():
     print(doc)
   return doc
 
-
-
-#网易云英语热评
-def get_hot():
-  if tx_key is None:
-    print('没有设置天行key')
-    return 0
-
-
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp")
