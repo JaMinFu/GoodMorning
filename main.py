@@ -95,7 +95,7 @@ def get_words():
   if words.status_code != 200:
     return get_words()
   print(words.json()['data']['text'])
-  return '希望娟子考神附体，考的都会，蒙的都对，加油加油，放轻松！'
+  return words.json()['data']['text']
 
 
 def format_temperature(temperature):
