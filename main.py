@@ -89,7 +89,7 @@ def get_daily_eng():
     print(doc)
   return doc
 
-# 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功
+# 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功xxxxx
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp")
   if words.status_code != 200:
