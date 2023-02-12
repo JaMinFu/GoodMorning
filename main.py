@@ -139,7 +139,7 @@ data = {
     "color": get_random_color()
   },
   "temperature": {
-    "value": #str(math.floor(weather['temp']))+'℃',
+    "value": '', #str(math.floor(weather['temp']))+'℃',
     "color": get_random_color()
   },
   "highest": {
