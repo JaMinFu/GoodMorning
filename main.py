@@ -123,7 +123,7 @@ data = {
     "color": get_random_color()
   },
   "date": {
-    "value": today.strftime('%Y年%m月%d日 '), # +week_list[today.weekday()],
+    "value": today.strftime('%Y年%m月%d日 '),  +week_list[today.weekday()],
     "color": get_random_color()
   },
   "weather": {
@@ -131,23 +131,23 @@ data = {
     "color": get_random_color()
   },
     "wind": {
-    "value": '', #weather['wind'],
+    "value": '你若安好便是晴天', #weather['wind'],
     "color": get_random_color()
   },
     "airQuality": {
-    "value": '空气质量,',#+ weather['airQuality'],
+    "value": '空气质量,测不出',#+ weather['airQuality'],
     "color": get_random_color()
   },
   "temperature": {
-    "value": '', #str(math.floor(weather['temp']))+'℃',
+    "value": '未知', #str(math.floor(weather['temp']))+'℃',
     "color": get_random_color()
   },
   "highest": {
-    "value": '',#str(math.floor(weather['high']))+'℃',
+    "value": '未知',#str(math.floor(weather['high']))+'℃',
     "color": get_random_color()
   },
   "lowest": {
-    "value": '',#str(math.floor(weather['low']))+'℃',
+    "value": '未知',#str(math.floor(weather['low']))+'℃',
     "color": get_random_color()
   },
   "love_days": {
