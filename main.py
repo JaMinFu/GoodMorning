@@ -48,7 +48,8 @@ def get_weather():
   res = requests.get(url).json()
   if res is None:
     return None
-  weather = res['data']['list'][0]
+  # weather = res['data']['list'][0]
+  weather =None
   return weather
 
 # 纪念日正数
