@@ -114,9 +114,9 @@ except WeChatClientException as e:
 
 wm = WeChatMessage(client)
 weather = get_weather()
-if weather is None:
-  print('获取天气失败')
-  exit(422)
+#if weather is None:
+#  print('获取天气失败')
+#  exit(422)
 data = {
   "city": {
     "value": city,
@@ -131,23 +131,23 @@ data = {
     "color": get_random_color()
   },
     "wind": {
-    "value": weather['wind'],
+    "value": '', #weather['wind'],
     "color": get_random_color()
   },
     "airQuality": {
-    "value": '空气质量,'+ weather['airQuality'],
+    "value": '空气质量,'#+ weather['airQuality'],
     "color": get_random_color()
   },
   "temperature": {
-    "value": str(math.floor(weather['temp']))+'℃',
+    "value": #str(math.floor(weather['temp']))+'℃',
     "color": get_random_color()
   },
   "highest": {
-    "value": str(math.floor(weather['high']))+'℃',
+    "value": #str(math.floor(weather['high']))+'℃',
     "color": get_random_color()
   },
   "lowest": {
-    "value": str(math.floor(weather['low']))+'℃',
+    "value": #str(math.floor(weather['low']))+'℃',
     "color": get_random_color()
   },
   "love_days": {
