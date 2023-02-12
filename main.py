@@ -41,16 +41,16 @@ if template_id is None:
 
 # weather 直接返回对象，在使用的地方用字段进行调用。
 def get_weather():
-  if city is None:
-    print('请设置城市')
-    return None
-  url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
-  res = requests.get(url).json()
-  if res is None:
-    return None
+  #if city is None:
+  #  print('请设置城市')
+  #  return None
+  # url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
+  #res = requests.get(url).json()
+  #if res is None:
+  return None
   # weather = res['data']['list'][0]
-  weather =None
-  return weather
+  # weather =None
+  # return weather
 
 # 纪念日正数
 def get_memorial_days_count():
