@@ -123,19 +123,19 @@ data = {
     "color": get_random_color()
   },
   "date": {
-    "value": today.strftime('%Y年%m月%d日 '),  +week_list[today.weekday()],
+    "value": today.strftime('%Y年%m月%d日 ') +week_list[today.weekday()],
     "color": get_random_color()
   },
   "weather": {
-    "value": '', #weather['weather'],
+    "value": '你若安好便是晴天', #weather['weather'],
     "color": get_random_color()
   },
     "wind": {
-    "value": '你若安好便是晴天', #weather['wind'],
+    "value": '风云难测', #weather['wind'],
     "color": get_random_color()
   },
     "airQuality": {
-    "value": '空气质量,测不出',#+ weather['airQuality'],
+    "value": '空气质量,未知',#+ weather['airQuality'],
     "color": get_random_color()
   },
   "temperature": {
