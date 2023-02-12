@@ -123,11 +123,11 @@ data = {
     "color": get_random_color()
   },
   "date": {
-    "value": today.strftime('%Y年%m月%d日 ') +week_list[today.weekday()],
+    "value": today.strftime('%Y年%m月%d日 '), # +week_list[today.weekday()],
     "color": get_random_color()
   },
   "weather": {
-    "value": weather['weather'],
+    "value": '', #weather['weather'],
     "color": get_random_color()
   },
     "wind": {
@@ -135,7 +135,7 @@ data = {
     "color": get_random_color()
   },
     "airQuality": {
-    "value": '空气质量,'#+ weather['airQuality'],
+    "value": '空气质量,',#+ weather['airQuality'],
     "color": get_random_color()
   },
   "temperature": {
@@ -143,11 +143,11 @@ data = {
     "color": get_random_color()
   },
   "highest": {
-    "value": #str(math.floor(weather['high']))+'℃',
+    "value": '',#str(math.floor(weather['high']))+'℃',
     "color": get_random_color()
   },
   "lowest": {
-    "value": #str(math.floor(weather['low']))+'℃',
+    "value": '',#str(math.floor(weather['low']))+'℃',
     "color": get_random_color()
   },
   "love_days": {
