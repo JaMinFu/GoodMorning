@@ -152,6 +152,10 @@ data = {
     "value": weather['air_level'],
     "color": get_random_color()
   },
+  "air_tips":{
+    "value": weather['air_tips'],
+    "color": get_random_color()
+  },
   "temperature": {
     "value": weather['tem']+'℃',
     "color": get_random_color()
