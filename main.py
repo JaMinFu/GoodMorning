@@ -187,6 +187,10 @@ data = {
     "value": str(get_birthday_left())+'天',
     "color": get_random_color()
   },
+  "birthday_boy_left": {
+    "value": str(get_birthday_boy_left())+'天',
+    "color": get_random_color()
+  },
   "words": {
     "value": get_words(),
     "color": get_random_color()
