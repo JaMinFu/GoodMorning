@@ -125,7 +125,7 @@ data = {
     "color": get_random_color()
   },
   "date": {
-    "value": weather['date'],
+    "value": weather['date'] + get_week_day(),
     "color": get_random_color()
   },
   "week_day": {
