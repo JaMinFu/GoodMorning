@@ -29,5 +29,6 @@ jobs:
       USER_ID: ${{ secrets.USER_ID }}
       START_DATE: ${{ secrets.START_DATE }}
       BIRTHDAY: ${{ secrets.BIRTHDAY }}
+      BIRTHDAY_BOY: ${{ secrets.BIRTHDAY_BOY }}
       CITY: ${{ secrets.CITY }}
       TX_KEY: ${{secrets.TX_KEY}}
