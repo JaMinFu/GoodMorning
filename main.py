@@ -168,10 +168,18 @@ data = {
     "value": get_memorial_days_count(),
     "color": get_random_color()
   },
+   "birthday_left": {
+    "value": str(get_birthday_left())+'天',
+    "color": get_random_color()
+  },
   "words": {
     "value": get_words(),
     "color": get_random_color()
   },
+  "daily_eng":{
+     "value": get_daily_eng(),
+    "color": get_random_color()
+  }
 }
 
 if __name__ == '__main__':
