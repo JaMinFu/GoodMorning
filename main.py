@@ -20,6 +20,7 @@ tx_key=os.getenv("TX_KEY")
 start_date = os.getenv('START_DATE')
 city = os.getenv('CITY')
 birthday = os.getenv('BIRTHDAY')
+birthday_boy=os.getenv('BIRTHDAY_BOY')
 
 app_id = os.getenv('APP_ID')
 app_secret = os.getenv('APP_SECRET')
@@ -70,6 +71,16 @@ def get_birthday_left():
   next = datetime.strptime(str(today.year) + "-" + birthday, "%Y-%m-%d")
   if next < nowtime:
     next = next.replace(year=next.year + 1)
+  return (next - today).days
+
+def get_birthday_boy_left():
+  if birthday is None:
+    print('没有设置 BIRTHDAY_BOY')
+    return 0
+  next = datetime.strptime(str(today.year) + "-" + birthday_boy, "%Y-%m-%d")
+  if next < nowtime:
+    next = next.replace(year=next.year + 1)
+  print((next - today).days)
   return (next - today).days
 
 # 英语每日一句
