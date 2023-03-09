@@ -39,18 +39,20 @@ if template_id is None:
   print('请设置 TEMPLATE_ID')
   exit(422)
 
+def get_week_day():
+  week_list = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
+  week_day = week_list[datetime.date(today).weekday()]
+  return week_day
+  
 # weather 直接返回对象，在使用的地方用字段进行调用。
 def get_weather():
-  #if city is None:
-  #  print('请设置城市')
-  #  return None
-  # url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
-  #res = requests.get(url).json()
-  #if res is None:
-  return None
-  # weather = res['data']['list'][0]
-  # weather =None
-  # return weather
+    if city is None:
+      print('请设置城市')
+      return None
+    url = "https://v0.yiketianqi.com/api?unescape=1&version=v63&appid=43656176&appsecret=I42og6Lm&city=" + city
+    res = requests.get(url).json()
+    weather = res
+    return weather
 
 # 纪念日正数
 def get_memorial_days_count():
@@ -114,58 +116,62 @@ except WeChatClientException as e:
 
 wm = WeChatMessage(client)
 weather = get_weather()
-#if weather is None:
-#  print('获取天气失败')
-#  exit(422)
+if weather is None:
+  print('获取天气失败')
+  exit(422)
 data = {
   "city": {
     "value": city,
     "color": get_random_color()
   },
   "date": {
-    "value": today.strftime('%Y年%m月%d日 ') +week_list[today.weekday()],
+    "value": weather['date'],
+    "color": get_random_color()
+  },
+  "week_day": {
+    "value": get_week_day(),
     "color": get_random_color()
   },
   "weather": {
-    "value": '你若安好便是晴天', #weather['weather'],
+    "value": weather['wea'],
     "color": get_random_color()
   },
-    "wind": {
-    "value": '风云难测', #weather['wind'],
+  "humidity": {
+    "value": weather['humidity'],
     "color": get_random_color()
   },
-    "airQuality": {
-    "value": '空气质量,未知',#+ weather['airQuality'],
+  "wind": {
+    "value": f"{weather['win']}{weather['win_speed']}",
+    "color": get_random_color()
+  },
+  "air_data": {
+    "value": weather['air'],
+    "color": get_random_color()
+  },
+  "air_quality": {
+    "value": weather['air_level'],
     "color": get_random_color()
   },
   "temperature": {
-    "value": '未知', #str(math.floor(weather['temp']))+'℃',
+    "value": weather['tem']+'℃',
     "color": get_random_color()
   },
   "highest": {
-    "value": '未知',#str(math.floor(weather['high']))+'℃',
+    "value": weather['tem1']+'℃',
     "color": get_random_color()
   },
   "lowest": {
-    "value": '未知',#str(math.floor(weather['low']))+'℃',
+    "value": weather['tem2']+'℃',
     "color": get_random_color()
   },
   "love_days": {
     "value": get_memorial_days_count(),
     "color": get_random_color()
   },
-  "birthday_left": {
-    "value": str(get_birthday_left())+'天',
-    "color": get_random_color()
-  },
   "words": {
     "value": get_words(),
     "color": get_random_color()
   },
-  "daily_eng":{
-     "value": get_daily_eng(),
-    "color": get_random_color()
-  }
 }
 
 if __name__ == '__main__':
