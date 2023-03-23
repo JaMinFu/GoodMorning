@@ -25,6 +25,10 @@ birthday_boy=os.getenv('BIRTHDAY_BOY')
 app_id = os.getenv('APP_ID')
 app_secret = os.getenv('APP_SECRET')
 
+# 易客云天气
+yk_appid=os.getenv('yk_appid')
+yk_appsecret=os.getenv('yk_appsecret')
+
 user_ids = os.getenv('USER_ID', '').split("\n")
 template_id = os.getenv('TEMPLATE_ID')
 
@@ -50,8 +54,7 @@ def get_weather():
     if city is None:
       print('请设置城市')
       return None
-    # url = "https://v0.yiketianqi.com/api?unescape=1&version=v63&appid=43656176&appsecret=I42og6Lm&city=" + city
-    url="https://v0.yiketianqi.com/api?unescape=1&version=v61&appid=31866393&appsecret=Ln5S0Mtd&city=" + city
+    url="https://v0.yiketianqi.com/api?unescape=1&version=v61&appid="+yk_appid+"&appsecret="+yk_appsecret+"&city=" + city
     res = requests.get(url).json()
     weather = res
     return weather
