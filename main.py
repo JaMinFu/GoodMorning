@@ -54,6 +54,7 @@ def get_weather():
     if city is None:
       print('请设置城市')
       return None
+    # url = "https://v0.yiketianqi.com/api?unescape=1&version=v63&appid=44795547&appsecret=vpT4Pi6a&city=" + city
     url="https://v0.yiketianqi.com/api?unescape=1&version=v61&appid="+yk_appid+"&appsecret="+yk_appsecret+"&city=" + city
     res = requests.get(url).json()
     weather = res
