@@ -93,7 +93,7 @@ def get_daily_eng():
   if tx_key is None:
     print('没有设置天行key')
     return 0
-  conn = http.client.HTTPSConnection('api.tianapi.com')  #接口域名
+  conn = http.client.HTTPSConnection('api.tianapi.com99999999999')  #接口域名
   params = urllib.parse.urlencode({'key':tx_key})
   headers = {'Content-type':'application/x-www-form-urlencoded'}
   conn.request('POST','/everyday/index',params,headers)
