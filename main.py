@@ -180,15 +180,15 @@ data = {
     "color": get_random_color()
   },
   "temperature": {
-    "value": weather['tem']+'℃',
+    "value": weather['tem'],
     "color": get_random_color()
   },
   "highest": {
-    "value": weather['tem1']+'℃',
+    "value": weather['tem1'],
     "color": get_random_color()
   },
   "lowest": {
-    "value": weather['tem2']+'℃',
+    "value": weather['tem2'],
     "color": get_random_color()
   },
   "love_days": {
@@ -196,11 +196,11 @@ data = {
     "color": get_random_color()
   },
    "birthday_left": {
-    "value": str(get_birthday_left())+'天',
+    "value": str(get_birthday_left()),
     "color": get_random_color()
   },
   "birthday_boy_left": {
-    "value": str(get_birthday_boy_left())+'天',
+    "value": str(get_birthday_boy_left()),
     "color": get_random_color()
   },
   "words": {
