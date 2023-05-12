@@ -137,6 +137,7 @@ except WeChatClientException as e:
   exit(502)
 
 wm = WeChatMessage(client)
+day_en=get_daily_eng()
 weather = get_weather()
 if weather is None:
   print('获取天气失败')
@@ -207,11 +208,11 @@ data = {
     "color": get_random_color()
   },
   "daily_eng":{
-     "value": fin['newslist'][0]['content'],
+     "value": day_en['newslist'][0]['content'],
     "color": get_random_color()
   },
   "day_zh":{
-   "value": fin['newslist'][0]['note'],
+   "value": day_en['newslist'][0]['note'],
     "color": get_random_color()
   }
 }
