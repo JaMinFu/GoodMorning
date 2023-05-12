@@ -107,18 +107,19 @@ def get_daily_eng():
     
     # doc=fin['newslist'][0]['content'] + fin['newslist'][0]['note']
     # print(doc)
+  print(fin)
   return fin
 
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功xxxxx
 def get_words():
-  words = requests.get("https://api.shadiao.pro/chp", timeout=100)
+  words = requests.get("https://api.shadiao.pro/chp", timeout=200)
   if words.status_code != 200:
     return get_words()
   info=(words.json()['data']['text']).replace('\n', '')  
   print(info)
-  print(len(info.encode()))
-  print(len(info))
-  return (words.json()['data']['text']).replace('\n', '')
+  if len(info)>20
+    return get_words()
+  return info
 
 
 
