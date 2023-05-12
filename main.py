@@ -116,8 +116,8 @@ def get_words():
     return get_words()
   print((words.json()['data']['text']).replace('\n', ''))
   print(len((words.json()['data']['text']).replace('\n', '').encode()))
-  if len((words.json()['data']['text']).replace('\n', '').encode())>20:
-    return get_words()
+  # if len((words.json()['data']['text']).replace('\n', '').encode())>20:
+  #  return get_words()
   return (words.json()['data']['text']).replace('\n', '')
 
 
