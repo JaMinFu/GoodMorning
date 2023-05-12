@@ -101,17 +101,20 @@ def get_daily_eng():
   data = res.read()
   print(data.decode('utf-8'))
   result=data.decode('utf-8')
-  fin=json.loads(result)
-  doc=''
-  if fin['code']==200:
-    doc=fin['newslist'][0]['content'] + fin['newslist'][0]['note']
-    print(doc)
-  return doc
+  fin=json.loads(result) 
+  # doc=''
+  # if fin['code']==200:
+    
+    # doc=fin['newslist'][0]['content'] + fin['newslist'][0]['note']
+    # print(doc)
+  return fin
 
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功xxxxx
 def get_words():
   words = requests.get("https://api.shadiao.pro/chp", timeout=100)
   if words.status_code != 200:
+    return get_words()
+  if len((words.json()['data']['text']).replace('\n', '').encode())>20:
     return get_words()
   return (words.json()['data']['text']).replace('\n', '')
 
@@ -201,7 +204,11 @@ data = {
     "color": get_random_color()
   },
   "daily_eng":{
-     "value": get_daily_eng(),
+     "value": fin['newslist'][0]['content'],
+    "color": get_random_color()
+  },
+  "day_zh":{
+   "value": fin['newslist'][0]['note'],
     "color": get_random_color()
   }
 }
