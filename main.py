@@ -117,7 +117,7 @@ def get_words():
     return get_words()
   info=(words.json()['data']['text']).replace('\n', '')  
   print(info)
-  if len(info)>20
+  if len(info)>20:
     return get_words()
   return info
 
