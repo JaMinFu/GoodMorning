@@ -114,10 +114,10 @@ def get_words():
   words = requests.get("https://api.shadiao.pro/chp", timeout=100)
   if words.status_code != 200:
     return get_words()
-  print((words.json()['data']['text']).replace('\n', ''))
-  print("长度"+len((words.json()['data']['text']).replace('\n', '').encode()))
-  # if len((words.json()['data']['text']).replace('\n', '').encode())>20:
-  #  return get_words()
+  info=words.json()['data']['text']).replace('\n', '')  
+  print("xxxxxxxxxxx")
+  print(len(info))
+  print("xxxxxxxxxxx")
   return (words.json()['data']['text']).replace('\n', '')
 
 
