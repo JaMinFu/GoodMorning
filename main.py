@@ -115,9 +115,9 @@ def get_words():
   if words.status_code != 200:
     return get_words()
   info=(words.json()['data']['text']).replace('\n', '')  
-  print("xxxxxxxxxxx")
+  print(info)
+  print(len(info.encode()))
   print(len(info))
-  print("xxxxxxxxxxx")
   return (words.json()['data']['text']).replace('\n', '')
 
 
