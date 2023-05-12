@@ -68,6 +68,10 @@ def get_memorial_days_count():
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
   return delta.days
 
+# 运行天数
+def get_sum_day_count():
+  return (today - datetime.strptime('2022-8-27', "%Y-%m-%d")).days
+
 # 生日倒计时
 def get_birthday_left():
   if birthday is None:
@@ -213,6 +217,10 @@ data = {
   },
   "day_zh":{
    "value": day_en['newslist'][0]['note'],
+    "color": get_random_color()
+  },
+  "sum_days":{
+     "value": get_sum_day_count(),
     "color": get_random_color()
   }
 }
