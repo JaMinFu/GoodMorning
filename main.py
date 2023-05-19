@@ -112,7 +112,7 @@ def get_daily_eng():
     # doc=fin['newslist'][0]['content'] + fin['newslist'][0]['note']
     # print(doc)
   print(fin)
-  len('len('Time is a versatile performer.It flies, marches on, heals all wounds, runs out and will')')
+  len('Time is a versatile performer.It flies, marches on, heals all wounds, runs out and will')
   if len(fin['newslist'][0]['content'])>90:
     return get_daily_eng()
   return fin
