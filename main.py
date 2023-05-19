@@ -225,6 +225,10 @@ data = {
   "sum_days":{
      "value": get_sum_day_count(),
     "color": get_random_color()
+  },
+  "temp_words":{
+     "value": '',
+    "color": get_random_color()
   }
 }
 
