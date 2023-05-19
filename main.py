@@ -112,6 +112,8 @@ def get_daily_eng():
     # doc=fin['newslist'][0]['content'] + fin['newslist'][0]['note']
     # print(doc)
   print(fin)
+  if len(fin['newslist'][0]['content'])>80:
+    return get_daily_eng()
   return fin
 
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功xxxxx
