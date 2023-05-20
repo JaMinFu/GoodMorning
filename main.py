@@ -215,13 +215,11 @@ data = {
     "color": get_random_color()
   },
   "daily_eng":{
-     # "value": day_en['newslist'][0]['content'],
-    "value": 'Today is a special day,let it be known throughout the land that my love for thee shall forever stand.',
+    "value": day_en['newslist'][0]['content'],
     "color": get_random_color()
   },
   "day_zh":{
-   # "value": day_en['newslist'][0]['note'],
-    "value": '让这份情传遍神州，我对你的爱永不凋零。',
+    "value": day_en['newslist'][0]['note'],
     "color": get_random_color()
   },
   "sum_days":{
