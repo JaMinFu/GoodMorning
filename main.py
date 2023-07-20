@@ -37,7 +37,7 @@ if app_id is None or app_secret is None:
   exit(422)
 
 if not user_ids:
-  print('请设置 USER_ID，若存在多个 ID 用回车分开')
+  print('请设置 USER_ID，若存在多个 ID 用回车分开  ')
   exit(422)
 
 if template_id is None:
